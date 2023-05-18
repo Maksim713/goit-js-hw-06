@@ -8,6 +8,7 @@ const ingredients = [
 ];
 
 const ulEl = document.getElementById("ingredients");
+const arrayLi = [];
 
 ingredients.forEach((ingredient) => {
   const listEl = document.createElement("li");
@@ -15,5 +16,7 @@ ingredients.forEach((ingredient) => {
   listEl.classList.add("item");
   console.log(listEl);
 
-  ulEl.append(listEl);
+  arrayLi.push(listEl);
 });
+
+ulEl.append(...arrayLi);

@@ -14,6 +14,7 @@ const images = [
 ];
 
 const list = document.querySelector(".gallery");
+const arrayImg = [];
 
 const markup = images
   .map(
@@ -22,4 +23,6 @@ const markup = images
   )
   .join("");
 
-list.insertAdjacentHTML("beforeend", markup);
+arrayImg.push(markup);
+
+list.insertAdjacentHTML("beforeend", arrayImg);
